@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     height: 100vh;
     overflow: hidden;
 }
 
-.main-container{
+.main-container {
     height: 100vh;
     width: 100%;
     overflow: auto;
@@ -20,27 +20,27 @@ body{
     scroll-behavior: smooth;
 }
 
-.hero{
+.hero {
     height: 110vh;
     background-image: url(../Images/hero-bg.jpg);
     background-size: contain;
     position: relative;
 }
 
-.hero .shape{
+.hero .shape {
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-.hero .burger{
+.hero .burger {
     position: absolute;
-    top:130px;
+    top: 130px;
     right: 50px;
     z-index: 100;
 }
 
-.hero .content{
+.hero .content {
     height: 100%;
     width: 45%;
     display: flex;
@@ -49,38 +49,261 @@ body{
     padding-inline-start: 50px;
 }
 
-.hero .content h2{
+.hero .content h2 {
     font-size: 28px;
     color: #FF8D29;
     font-family: 'Rubik';
 }
 
-.hero .content h1{
+.hero .content h1 {
     font-size: 60px;
     padding-block: 30px;
     color: #F1D6C6;
     font-family: 'Rubik';
 }
 
-.hero .content p{
+.hero .content p {
     font-size: 20px;
     color: #E8CCBB;
     font-family: 'Roboto';
+    margin-bottom: 50px;
 }
 
-.hero .content button{
-    height: 40px;
+.hero .content button {
+    height: 50px;
     width: 150px;
     border: none;
     font-size: 14px;
     background-color: #FF9D2E;
     color: #FFFFFF;
-    font-weight: bold;
-    margin-top: 50px;
+    font-weight: 600;
     font-family: 'Rubik';
     transition: 0.25s ease;
-    &:hover{
+
+    &:hover {
         background-color: #FFFFFF;
         color: #000000;
     }
+}
+
+.menu-section {
+    background-color: #F9F6F0;
+    padding-block: 70px;
+    padding-inline: 40px;
+}
+
+.menu-section .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu-section .container .card {
+    padding: 50px;
+    max-width: calc(100% / 4);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+    transition: 0.25s ease;
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.menu-section .container .card h2 {
+    font-family: 'Rubik';
+    font-size: 22px;
+}
+
+.menu-section .container .card p {
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-align: center;
+    color: #787878;
+}
+
+.menu-section .container .card .promo {
+    margin-top: 20px;
+}
+
+.menu-section .container .card::after {
+    content: "";
+    background-color: #FF9D2E;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    clip-path: polygon(0 83%, 100% 65%, 100% 100%, 0% 100%);
+    transition: 0.25s ease;
+}
+
+.menu-section .container .card:hover::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu-section .container .card:hover .promo-icon path {
+    fill: #fff;
+}
+
+.menu-section .container .card:hover p {
+    color: #fff;
+}
+
+.about-section {
+    padding-block: 70px;
+    padding-inline: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-section .section {
+    width: 50%;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.about-section .section .banner {
+    position: absolute;
+    top: 0px;
+    animation: scale-up 4s ease infinite;
+}
+
+@keyframes scale-up {
+    0% {
+        scale: 1;
+    }
+
+    50% {
+        scale: 1.1;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.about-section .section h1 {
+    font-size: 40px;
+    font-family: 'Rubik';
+}
+
+.about-section .section h1 span {
+    color: #FF9D2E;
+}
+
+.about-section .section p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    line-height: 1.5;
+    color: #787878;
+}
+
+.about-section .section ul {
+    list-style-type: none;
+}
+
+.about-section .section ul li {
+    display: flex;
+    align-content: center;
+    margin-top: 10px;
+    font-family: 'Rubik';
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about-section .section ul li ion-icon {
+    margin-right: 10px;
+    font-size: x-large;
+    color: #FF8D29;
+    font-weight: bold;
+    --ionicon-stroke-width: 16px;
+}
+
+.hover-button {
+    height: 50px;
+    width: 150px;
+    border: none;
+    font-size: 14px;
+    background-color: #FF9D2E;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-family: 'Rubik';
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hover-button::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    background-color: #000;
+    bottom: 0;
+    left: 15px;
+    border-radius: 50%;
+    transform: translateY(20px);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.hover-button:hover::after {
+    transform: translateY(0px) scale(30);
+}
+
+.about-section-2 {
+    padding-inline: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../Images/hero-bg.jpg);
+}
+
+.about-section-2 .section {
+    width: 50%;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+}
+
+.about-section-2 .section .burger {
+    margin-top: 100px;
+}
+
+.about-section-2 .section .banner {
+    position: absolute;
+    top: 70px;
+    animation: scale-up 4s ease infinite;
+}
+
+.about-section-2 .section h1 {
+    font-size: 40px;
+    font-family: 'Rubik';
+    color: #fff;
+}
+
+.about-section-2 .section h1 span {
+    color: #FF9D2E;
+}
+
+.about-section-2 .section p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    line-height: 1.5;
+    color: #DEDEDE;
 }
