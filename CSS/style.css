@@ -307,3 +307,119 @@ body {
     line-height: 1.5;
     color: #DEDEDE;
 }
+
+.delivery-section {
+    padding-block: 70px;
+    padding-inline: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delivery-section .bg-section{
+    background-image: url(../Images/delivery-banner-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.delivery-section .section {
+    width: 50%;
+    padding-inline: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+
+.delivery-section .section h1 {
+    font-size: 40px;
+    font-family: 'Rubik';
+}
+
+.delivery-section .section h1 span {
+    color: #FF9D2E;
+}
+
+.delivery-section .section p {
+    font-size: 16px;
+    font-family: 'Roboto';
+    line-height: 1.5;
+    color: #787878;
+}
+
+.testimonial{
+    padding-block: 70px;
+    padding-inline: 30px;
+    background-color: #F9F6F0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial p:first-child{
+    color: #F42F25;
+    font-size: 16px;
+    font-family: 'Rubik';
+}
+
+.testimonial h1{
+    font-family: 'Rubik';
+    font-size: 40px;
+}
+
+.testimonial h1 span{
+    color: #FF9D2E;
+}
+
+.testimonial .desc{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color:#787878;
+    width: 35%;
+    text-align: center;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+.card-container .card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+.card-container .card .profile{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-container .card .profile img{
+    border-radius: 50%;
+}
+
+.card-container h2{
+    font-family: 'Rubik';
+    font-size: 20px;
+}
+
+.card-container p{
+    color: #787878;
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.card-container .card .rating{
+    color: #FF9D2E;
+    font-size: 18px;
+}
