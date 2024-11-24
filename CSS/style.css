@@ -20,11 +20,140 @@ body {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
+.back-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #FF9D2E;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    color: #fff;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+
+    &:hover {
+        background-color: #000;
+    }
+}
+
+.back-btn ion-icon {
+    --ionicon-stroke-width: 152px
+}
+
+.back-btn.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar {
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid hsla(23, 61%, 86%, 0.2);
+    padding-inline: 50px;
+}
+
+.navbar h1 {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'Rubik';
+}
+
+.navbar h1 span {
+    color: #FF9D2E;
+}
+
+.navbar .content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    font-family: 'Rubik';
+    font-size: 15px;
+}
+
+.navbar ul li a {
+    color: #F1D6C6;
+    font-weight: 500;
+}
+
+.navbar p a ion-icon {
+    font-size: 22px;
+    color: #F1D6C6;
+    --ionicon-stroke-width: 54px;
+}
+
+.navbar.active p a ion-icon {
+    color: #000;
+}
+
+.navbar a button {
+    font-size: 15px;
+    height: 43px;
+    width: max-content;
+    padding-inline: 30px;
+}
+
+.navbar.active {
+    background: #fff;
+    position: fixed;
+    top: -86px;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+    ;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.navbar.active h1 {
+    color: #000;
+}
+
+.navbar.active ul li a {
+    color: #000;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
 .hero {
-    height: 110vh;
+    height: 130vh;
     background-image: url(../Images/hero-bg.jpg);
-    background-size: contain;
+    background-size: cover;
     position: relative;
+    background-repeat: no-repeat;
 }
 
 .hero .shape {
@@ -35,7 +164,7 @@ body {
 
 .hero .burger {
     position: absolute;
-    top: 130px;
+    top: 200px;
     right: 50px;
     z-index: 100;
 }
@@ -316,7 +445,7 @@ body {
     justify-content: center;
 }
 
-.delivery-section .bg-section{
+.delivery-section .bg-section {
     background-image: url(../Images/delivery-banner-bg.png);
     background-position: center;
     background-size: cover;
@@ -348,7 +477,7 @@ body {
     color: #787878;
 }
 
-.testimonial{
+.testimonial {
     padding-block: 70px;
     padding-inline: 30px;
     background-color: #F9F6F0;
@@ -359,37 +488,37 @@ body {
     gap: 20px;
 }
 
-.testimonial p:first-child{
+.testimonial p:first-child {
     color: #F42F25;
     font-size: 16px;
     font-family: 'Rubik';
 }
 
-.testimonial h1{
+.testimonial h1 {
     font-family: 'Rubik';
     font-size: 40px;
 }
 
-.testimonial h1 span{
+.testimonial h1 span {
     color: #FF9D2E;
 }
 
-.testimonial .desc{
+.testimonial .desc {
     font-family: 'Roboto';
     font-size: 16px;
-    color:#787878;
+    color: #787878;
     width: 35%;
     text-align: center;
 }
 
-.card-container{
+.card-container {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-top: 50px;
 }
 
-.card-container .card{
+.card-container .card {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -398,28 +527,28 @@ body {
     box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
-.card-container .card .profile{
+.card-container .card .profile {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.card-container .card .profile img{
+.card-container .card .profile img {
     border-radius: 50%;
 }
 
-.card-container h2{
+.card-container h2 {
     font-family: 'Rubik';
     font-size: 20px;
 }
 
-.card-container p{
+.card-container p {
     color: #787878;
     font-family: 'Roboto';
     font-size: 16px;
 }
 
-.card-container .card .rating{
+.card-container .card .rating {
     color: #FF9D2E;
     font-size: 18px;
 }
