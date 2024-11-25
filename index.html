@@ -10,6 +10,11 @@
 
 <body>
     <div class="main-container" id="main">
+        <div class="search-box" id="search-box">
+            <input type="text" placeholder="Type keywords here...">
+            <button>search</button>
+            <button id="close-btn">close</button>
+        </div>
         <div class="back-btn" id="back"><ion-icon name="chevron-up-outline"></ion-icon></div>
         <div class="navbar" id="nav">
             <a href="#">
@@ -17,12 +22,12 @@
             </a>
             <div class="content">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">Home</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
-                <p><a href="#"><ion-icon name="search-outline"></ion-icon></a></p>
+                <p id="search-btn"><ion-icon name="search-outline"></ion-icon></p>
                 <a href="#"><button class="hover-button">Reservation</button></a>
             </div>
         </div>
@@ -630,6 +635,47 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <img src="Images/delivery-boy.svg" width="160" alt="">
+                <div class="container">
+                    <h1>Foodie<span>.</span></h1>
+                    <p>Financial experts support or help you to to find out which way you can raise your funds more.</p>
+                    <ul>
+                        <li><a href="#">F</a></li>
+                        <li><a href="#">T</a></li>
+                        <li><a href="#">I</a></li>
+                        <li><a href="#">P</a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <h3>Contact Info</h3>
+                    <a href="tel:abc@gmail.com">+91 80524 74602</a>
+                    <a href="mailto:abc@gmail.com">devkr074@gmail.com</a>
+                    <p>153 Williamson Plaza, Maggieberg, MT 09514</p>
+                </div>
+                <div class="container">
+                    <h3>Opening Hours</h3>
+                    <p>Monday-Friday: 08:00-22:00</p>
+                    <p>Tuesday 4PM: Till Mid Night</p>
+                    <p>Saturday: 10:00-16:00</p>
+                </div>
+                <div class="container">
+                    <form action="">
+                        <input type="text">
+                        <input type="email">
+                        <select name="" id="">
+                            <option value="">Person</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Person</option>
+                            <option value="3">3 Person</option>
+                            <option value="4">4 Person</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2024 Foodie All Rights Reserved</div>
         </div>
     </div>
     <script src="JS/script.js"></script>
