@@ -140,7 +140,6 @@ a {
     position: fixed;
     top: -86px;
     box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
-    ;
     animation: slideIn 0.5s ease-out forwards;
 }
 
@@ -843,8 +842,19 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 20px;
     z-index: 2000;
     transition: all 0.5s ease;
+}
+
+.search-box button{
+    background: transparent;
+    border: none;
+}
+
+.search-box button ion-icon{
+    color: #fff;
+    font-size: 32px;
 }
 
 .search-box input {
@@ -859,4 +869,103 @@ a {
 
 .search-box.active {
     top: 0;
+}
+
+.navbar .content-2{
+    width: calc(100% - 30px);
+    position: absolute;
+    background: #fff;
+    height: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.25s ease;
+    visibility: hidden;
+    overflow: hidden;
+    padding-block: 20px;
+    padding-inline: 20px;
+    box-shadow: 0 1px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.navbar .content-2.active{
+    height: 236px;
+    visibility: visible;
+}
+
+.navbar .content-2 ul{
+    flex-direction: column;
+    align-items: normal;
+    gap: 20px;
+}
+
+.navbar .content-2 ul li a{
+    color: #000;
+    padding-inline: 10px;
+    &:hover{
+        color: #FF9D2E;
+    }
+}
+
+.navbar .content-2 ul li.active a{
+    color: #FF9D2E;
+}
+
+.navbar .content-2 ul li{
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.04);;
+    padding-block-end: 20px;
+}
+
+.navbar .content-2 ul li:last-child{
+    border: none;
+}
+
+.open{
+    display: none;
+    gap: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.open .line-top{
+    height: 3px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: #F1D6C6;
+    transition: all 0.25s ease;
+}
+
+.open .line-middle{
+    height: 3px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: #F1D6C6;
+    transition: all 0.25s ease;
+}
+
+.open .line-bottom{
+    height: 3px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: #F1D6C6;
+    margin-left: auto;
+    transition: all 0.25s ease;
+}
+
+.open.active .line-top{
+
+    transform: translate(1px,3px) rotate(45deg);
+}
+
+.open.active .line-middle{
+
+    transform: rotate(-45deg);
+}
+
+.open.active .line-bottom{
+    transform: translate(-1px,-3px) rotate(45deg);
+}
+
+.navbar.active .open .line{
+    background: #000;
 }

@@ -4,6 +4,8 @@ const back = document.getElementById('back');
 const searchBtn = document.getElementById('search-btn');
 const searchBox = document.getElementById('search-box');
 const closeBtn = document.getElementById('close-btn');
+const openBtn = document.getElementById('open');
+const content2 = document.getElementById('content-2');
 main.addEventListener("scroll", function () {
     if (main.scrollTop >= 120) {
         console.log(main.scrollTop);
@@ -19,10 +21,6 @@ back.addEventListener('click', function () {
     main.scrollTop = 0;
 });
 searchBtn.addEventListener('click', function () {
-    searchBox.classList.toggle('active');
-    main.classList.toggle('active');
-});
-closeBtn.addEventListener('click', function () {
     searchBox.classList.toggle('active');
     main.classList.toggle('active');
 });
