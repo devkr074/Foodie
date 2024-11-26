@@ -24,3 +24,11 @@ searchBtn.addEventListener('click', function () {
     searchBox.classList.toggle('active');
     main.classList.toggle('active');
 });
+closeBtn.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    main.classList.toggle('active');
+});
+openBtn.addEventListener('click',function(){
+    this.classList.toggle('active')
+    content2.classList.toggle('active');
+})
