@@ -486,7 +486,7 @@ body.active {
 .hero-subtitle {
   color: hsl(28, 100%, 58%);
   font-family: 'Shadows Into Light', cursive;
-  font-size: 1.8rem;
+  font-size: 3.8rem;
   letter-spacing: 1px;
   margin-block-end: 25px;
 }
@@ -644,29 +644,6 @@ body.active {
   max-width: 44ch;
   margin-inline: auto;
   margin-block-end: 30px;
-}
-
-.fiter-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-block-end: 40px;
-}
-
-.filter-btn {
-  background-color: hsl(0, 0%, 100%);
-  color: var(--color, hsl(210, 26%, 7%));
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  padding: 5px 20px;
-  border: 1px solid var(--border-color, hsl(0, 0%, 93%));
-}
-
-.filter-btn.active {
-  background-color: hsl(32, 100%, 59%);
-  --color: hsl(0, 0%, 100%);
-  --border-color: hsl(32, 100%, 59%);
 }
 
 .food-menu-list {
