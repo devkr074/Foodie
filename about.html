@@ -3,193 +3,317 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodie - Fast Food Restaurant</title>
+    <title>Foodie - Supper delicious Burger in town!</title>
+    <link rel="shortcut icon" href="Images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="preload" as="image" href="Images/hero-banner.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="Images/hero-banner-bg.png" media="min-width(768px)">
+    <link rel="preload" as="image" href="Images/hero-bg.jpg">
 </head>
 
-<body>
-    <div class="main-container" id="main">
-        <div class="search-box" id="search-box">
-            <input type="text" placeholder="Type keywords here...">
-            <button><ion-icon name="search-outline"></ion-icon></button>
-            <button id="close-btn"><ion-icon name="close"></ion-icon></button>
-        </div>
-        <div class="back-btn" id="back"><ion-icon name="chevron-up-outline"></ion-icon></div>
-        <div class="navbar" id="nav">
-            <a href="#">
-                <h1 class="logo">Foodie<span>.</span></h1>
-            </a>
-            <div class="content">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li class="active"><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+<body id="top">
+    <header class="header" data-header>
+        <div class="container">
+            <h1>
+                <a href="#top" class="logo">Foodie<span class="span">.</span></a>
+            </h1>
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+                    <li class="nav-item">
+                        <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="shop.html" class="navbar-link" data-nav-link>Shop</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+                    </li>
                 </ul>
-                <p id="search-btn"><ion-icon name="search-outline"></ion-icon></p>
-                <a href="#"><button class="hover-button">Reservation</button></a>
+            </nav>
+            <div class="header-btn-group">
+                <button class="search-btn" aria-label="Search" data-search-btn>
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+                <button class="btn btn-hover"><a href="#booking">Reservation</a></button>
+                <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </button>
             </div>
-            <button class="open" id="open">
-                <div class="line line-top"></div>
-                <div class="line line-middle"></div>
-                <div class="line line-bottom"></div>
+        </div>
+    </header>
+    <div class="search-container" data-search-container>
+        <div class="search-box">
+            <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+                class="search-input">
+            <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+                <ion-icon name="search-outline"></ion-icon>
             </button>
-            <div class="content-2" id="content-2">
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
         </div>
-        <div class="hero">
-            <img src="Images/hero-bg-shape.png" height="70%" width="70%" class="shape" alt="">
-            <img src="Images/about-banner-2.png" class="burger" width="45%" alt="">
-            <div class="content">
-                <h2><i>About Foodie</i></h2>
-                <h1>Best Fast Food Corner in town</h1>
-                <p>Food is any substance consumed to provide nutritional support for an organism.</p>
-                <a href="#"><button>Book a Table</button></a>
-            </div>
-        </div>
-        <div class="about-section">
-            <div class="section">
-                <img src="Images/about-banner.png" width="80%" alt="">
-                <img class="banner" src="Images/sale-shape-red.png" width="30%" alt="">
-            </div>
-            <div class="section">
-                <h1><span>Wel</span>come</h1>
-                <p>The restaurants in Hangzhou also catered to many northern Chinese who had fled south from Kaifeng
-                    during the Jurchen invasion of the 1120s, while it is also known that many restaurants were run by
-                    families.</p>
-                <ul>
-                    <li>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                        <span>Delicious & Healthy Foods</span>
-                    </li>
-                    <li>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                        <span>Specific Family And Kids Zone</span>
-                    </li>
-                    <li>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                        <span>Music & Other Facilities</span>
-                    </li>
-                    <li>
-                        <ion-icon name="checkmark-circle"></ion-icon>
-                        <span>Fastest Food Home Delivery</span>
-                    </li>
-                </ul>
-                <a href="#"><button class="hover-button">Order Now</button></a>
-            </div>
-        </div>
-        <div class="testimonial">
-            <h1>What our Customers <span>Says?</span></h1>
-            <p class="desc">Food is any substance consumed to provide nutritional support for an organism.</p>
-            <div class="card-container">
-                <div class="card">
-                    <div class="profile">
-                        <img src="Images/avatar-1.jpg" width="75" alt="">
-                        <div class="details">
-                            <h2>Robert William</h2>
-                            <p>CEO Kingfisher</p>
-                        </div>
-                    </div>
-                    <p>"I would be lost without restaurant. I would like to personally thank you for your outstanding
-                        product."</p>
-                    <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-outline"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="profile">
-                        <img src="Images/avatar-2.jpg" width="75" alt="">
-                        <div class="details">
-                            <h2>Thomas Josef</h2>
-                            <p>CEO Getforce</p>
-                        </div>
-                    </div>
-                    <p>"I would be lost without restaurant. I would like to personally thank you for your outstanding
-                        product."</p>
-                    <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="profile">
-                        <img src="Images/avatar-3.jpg" width="75" alt="">
-                        <div class="details">
-                            <h2>Charles Richard</h2>
-                            <p>CEO Angela</p>
-                        </div>
-                    </div>
-                    <p>"I would be lost without restaurant. I would like to personally thank you for your outstanding
-                        product."</p>
-                    <div class="rating">
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-half-outline"></ion-icon>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="footer-top">
-                <img src="Images/delivery-boy.svg" width="160" alt="">
+        <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+    </div>
+    <main>
+        <article>
+            <section class="hero" id="home" style="background-image: url('Images/hero-bg.jpg')">
                 <div class="container">
-                    <h1>Foodie<span>.</span></h1>
-                    <p>Financial experts support or help you to to find out which way you can raise your funds more.</p>
-                    <ul>
-                        <li><a href="#">F</a></li>
-                        <li><a href="#">T</a></li>
-                        <li><a href="#">I</a></li>
-                        <li><a href="#">P</a></li>
+                    <div class="hero-content">
+                        <p class="hero-subtitle">About Foodie</p>
+                        <h2 class="h1 hero-title">Know More About Us...</h2>
+                        <p class="hero-text">Food is any substance consumed to provide nutritional support for an
+                            organism.</p>
+                        <button class="btn"><a href="#booking">Book A Table</a></button>
+                    </div>
+                    <figure class="hero-banner">
+                        <img src="Images/hero-banner-bg.png" width="820" height="716" alt="" aria-hidden="true"
+                            class="w-100 hero-img-bg">
+                        <img src="Images/about-hero-banner.png" style="bottom: -32px" width="700" height="637" loading="lazy" alt="Burger"
+                            class="w-100 hero-img">
+                    </figure>
+                </div>
+            </section>
+            <section class="section section-divider gray about" id="about">
+                <div class="container">
+                    <div class="about-banner">
+                        <img src="Images/about-banner.png" width="509" height="459" loading="lazy"
+                            alt="Burger with Drinks" class="w-100 about-img">
+                        <img src="Images/sale-shape-red.png" width="216" height="226" alt="get up to 50% off now"
+                            class="abs-img scale-up-anim">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="h2 section-title">
+                            Caferio, Burgers, and Best Pizzas
+                            <span class="span">in Town!</span>
+                        </h2>
+                        <p class="section-text">
+                            The restaurants in Hangzhou also catered to many northern Chinese who had fled south from
+                            Kaifeng during
+                            the Jurchen
+                            invasion of the 1120s, while it is also known that many restaurants were run by families.
+                        </p>
+                        <ul class="about-list">
+                            <li class="about-item">
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                                <span class="span">Delicious & Healthy Foods</span>
+                            </li>
+                            <li class="about-item">
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                                <span class="span">Spacific Family And Kids Zone</span>
+                            </li>
+                            <li class="about-item">
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                                <span class="span">Music & Other Facilities</span>
+                            </li>
+                            <li class="about-item">
+                                <ion-icon name="checkmark-outline"></ion-icon>
+                                <span class="span">Fastest Food Home Delivery</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-hover">Order Now</button>
+                    </div>
+                </div>
+            </section>
+            <section class="section white testi">
+                <div class="container">
+                    <p class="section-subtitle">Testimonials</p>
+                    <h2 class="h2 section-title">
+                        Our Customers <span class="span">Reviews</span>
+                    </h2>
+                    <p class="section-text">
+                        Food is any substance consumed to provide nutritional
+                        support for an organism.
+                    </p>
+                    <ul class="testi-list has-scrollbar">
+                        <li class="testi-item">
+                            <div class="testi-card">
+                                <div class="profile-wrapper">
+                                    <figure class="avatar">
+                                        <img src="Images/avatar-1.jpg" width="80" height="80" loading="lazy"
+                                            alt="Robert William">
+                                    </figure>
+                                    <div>
+                                        <h3 class="h4 testi-name">Robert William</h3>
+                                        <p class="testi-title">CEO Kingfisher</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testi-text">
+                                    "I would be lost without restaurant. I would like to personally thank you for your
+                                    outstanding
+                                    product."
+                                </blockquote>
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testi-item">
+                            <div class="testi-card">
+                                <div class="profile-wrapper">
+                                    <figure class="avatar">
+                                        <img src="Images/avatar-2.jpg" width="80" height="80" loading="lazy"
+                                            alt="Thomas Josef">
+                                    </figure>
+                                    <div>
+                                        <h3 class="h4 testi-name">Thomas Josef</h3>
+                                        <p class="testi-title">CEO Getforce</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testi-text">
+                                    "I would be lost without restaurant. I would like to personally thank you for your
+                                    outstanding
+                                    product."
+                                </blockquote>
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="testi-item">
+                            <div class="testi-card">
+                                <div class="profile-wrapper">
+                                    <figure class="avatar">
+                                        <img src="Images/avatar-3.jpg" width="80" height="80" loading="lazy"
+                                            alt="Charles Richard">
+                                    </figure>
+                                    <div>
+                                        <h3 class="h4 testi-name">Charles Richard</h3>
+                                        <p class="testi-title">CEO Angela</p>
+                                    </div>
+                                </div>
+                                <blockquote class="testi-text">
+                                    "I would be lost without restaurant. I would like to personally thank you for your
+                                    outstanding
+                                    product."
+                                </blockquote>
+                                <div class="rating-wrapper">
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                    <ion-icon name="star"></ion-icon>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="container">
-                    <h3>Contact Info</h3>
-                    <a href="tel:abc@gmail.com">+91 80524 74602</a>
-                    <a href="mailto:abc@gmail.com">devkr074@gmail.com</a>
-                    <p>153 Williamson Plaza, Maggieberg, MT 09514</p>
+            </section>
+        </article>
+    </main>
+    <footer class="footer">
+        <div class="footer-top" style="background-image: url('Images/footer-illustration.png')">
+            <div class="container">
+                <div class="footer-brand">
+                    <a href="#top" class="logo">Foodie<span class="span">.</span></a>
+                    <p class="footer-text">
+                        Financial experts support or help you to to find out which way you can raise your funds more.
+                    </p>
+                    <ul class="social-list">
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-twitter"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="social-link">
+                                <ion-icon name="logo-pinterest"></ion-icon>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="container">
-                    <h3>Opening Hours</h3>
-                    <p>Monday-Friday: 08:00-22:00</p>
-                    <p>Tuesday 4PM: Till Mid Night</p>
-                    <p>Saturday: 10:00-16:00</p>
-                </div>
-                <div class="container">
-                    <form action="">
-                        <input type="text">
-                        <input type="email">
-                        <select name="" id="">
-                            <option value="">Person</option>
-                            <option value="1">1 Person</option>
-                            <option value="2">2 Person</option>
-                            <option value="3">3 Person</option>
-                            <option value="4">4 Person</option>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Contact Info</p>
+                    </li>
+                    <li>
+                        <p class="footer-list-item">+91 1234567890</p>
+                    </li>
+                    <li>
+                        <p class="footer-list-item">example@gmail.com</p>
+                    </li>
+                    <li>
+                        <address class="footer-list-item">123 ABC Building, Near XYZ Park, 106022</address>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <p class="footer-list-title">Opening Hours</p>
+                    </li>
+                    <li>
+                        <p class="footer-list-item">Monday-Friday: 08:00-22:00</p>
+                    </li>
+                    <li>
+                        <p class="footer-list-item">Tuesday: 16:00-23:00</p>
+                    </li>
+                    <li>
+                        <p class="footer-list-item">Saturday: 10:00-16:00</p>
+                    </li>
+                </ul>
+                <form action="" class="footer-form" id="booking">
+                    <p class="footer-list-title">Book a Table</p>
+                    <div class="input-wrapper">
+                        <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+                            class="input-field">
+                        <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+                            class="input-field">
+                    </div>
+                    <div class="input-wrapper">
+                        <select name="total_person" aria-label="Total person" class="input-field">
+                            <option value="person">Person</option>
+                            <option value="2 person">2 Person</option>
+                            <option value="3 person">3 Person</option>
+                            <option value="4 person">4 Person</option>
+                            <option value="5 person">5 Person</option>
                         </select>
-                    </form>
-                </div>
+                        <input type="date" name="booking_date" aria-label="Reservation date" class="input-field">
+                    </div>
+                    <textarea name="message" required placeholder="Message" aria-label="Message"
+                        class="input-field"></textarea>
+                    <button type="submit" class="btn">Book a Table</button>
+                </form>
             </div>
-            <div class="footer-bottom">&copy; 2024 Foodie All Rights Reserved</div>
         </div>
-    </div>
-    <script src="JS/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="copyright-text">
+                    &copy; 2022 <a href="#" class="copyright-link">Foodie</a> All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+        <ion-icon name="chevron-up"></ion-icon>
+    </a>
+    <script src="JS/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
