@@ -1063,6 +1063,43 @@ body.active {
   gap: 10px;
 }
 
+.contact-container {
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container h3 {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-container h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-container .desc {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-container .telephone {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact-container .mail {
+  font-size: 20px;
+  text-align: center;
+}
+
 .footer {
   overflow: hidden;
 }
@@ -1319,6 +1356,7 @@ textarea.input-field {
   .about .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 30px;
   }
 
@@ -1401,6 +1439,34 @@ textarea.input-field {
 
   .input-wrapper {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-container {
+    padding-inline: 50px;
+  }
+
+  .contact-container h3 {
+    font-size: 20px;
+  }
+
+  .contact-container h1 {
+    font-size: 40px;
+    width: 70vw;
+  }
+
+  .contact-container .desc {
+    font-size: 16px;
+    width: 60vw;
+  }
+
+  .contact-container .telephone {
+    font-size: 6rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-container .mail {
+    font-size: 20px;
+    text-align: center;
   }
 }
 
